@@ -32,7 +32,7 @@ function displayResults(response) {
 
     let now = new Date();
     let myDate = document.querySelector('.location .date')
-    myDate.innerText = dateBuilder(now);
+    myDate.innerHTML = dateBuilder(now);
 
     let temp = document.querySelector('.current .temp');
     temp.innerHTML = `${Math.round(response.main.temp)} <span>&deg;C</span>`;
@@ -49,7 +49,7 @@ function displayResults(response) {
 
 function dateBuilder(dt) {
     let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    let days = ['Mon', 'Tus', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'];
+    let days = ['Sun', 'Mon', 'Tus', 'Wed', 'Thurs', 'Fri', 'Sat'];
     let date, day, month, year;
 
     day = days[dt.getDay()];
